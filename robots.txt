@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inasie.github.io/apt-deal-info/sitemap.xml
