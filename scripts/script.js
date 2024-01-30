@@ -8,7 +8,7 @@
         document.querySelector(`.items`).innerHTML = ``;
         posts.forEach(post => {
             document.querySelector(`.items`).innerHTML += `
-            <div class="item" onclick="location.href = '/detail.html?id=${post.id}';">
+            <div class="item" onclick="location.href = '/ICe1BotMaker/detail.html?id=${post.id}';">
                 <div class="item-image">
                     <img src="${post.image}" alt="item-image">
                 </div>
@@ -66,7 +66,7 @@
                 if (post.title.split(``).concat(post.categories.reduce((pre, cur) => pre.concat(cur.split(``)), [])).includes(text.trim()) && !items.includes(post)) {
                     items.push(post);
                     modalItems.innerHTML += `
-                    <div class="modal-item" onclick="location.href = '/detail.html?id=${post.id}';">
+                    <div class="modal-item" onclick="location.href = '/ICe1BotMaker/detail.html?id=${post.id}';">
                         <p class="modal-item-title">${post.title}</p>
                         <p class="modal-item-description">${post.description}</p>
                     </div>`;
