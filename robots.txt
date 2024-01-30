@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inasie.github.io/apt-deal-info/sitemap.xml
+Sitemap: https://ice1botmaker.github.io/ICe1BotMaker/sitemap.xml
