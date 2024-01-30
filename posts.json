@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "title": "블로그 만들기 프로젝트",
+        "description": "Github pages를 통해서 나만의 블로그를\n만들어보면 재밌고 도움되지 않을까 생각해봤습니다.",
+        "content": "### 📌 ICe1BotMaker\n\nI am attending a specialized high school and working as a functional class.\n\n#### 💻 A matter of interest to me\n\n- Editing videos, creating songs, developing web apps, and programming Node.js\n\n🔧 Skills: React, Styled-Components, Node.js, Typescript, php, MySQL, Python, Kotlin\n\n☕ Projects: kithub, wehome-market, xserum, linterf, get-user-mbti",
+        "categories": ["typescript", "소개"],
+        "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
+        "index": [
+            { "name": "ICe1BotMaker", "link": "#ice1botmaker" },
+            { "name": "A matter of interest to me", "link": "#amatterofinteresttome" }
+        ]
+    }
+]
