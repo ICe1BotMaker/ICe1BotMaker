@@ -84,6 +84,8 @@ body::-webkit-scrollbar {
 
 .header {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
     width: 100%;
     height: 100px;
@@ -179,7 +181,7 @@ body::-webkit-scrollbar {
 }
 
 .main .container .items {
-    margin: 100px 0;
+    margin: 100px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -196,17 +198,22 @@ body::-webkit-scrollbar {
     box-shadow: 0 0 0 var(--default-black);
     user-select: none;
     transform: translateY(0);
-    transition: .2s;
+    transition: .1s;
+}
+
+.main .container .items .item:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .main .container .items .item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 0 var(--default-black);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0 var(--default-black);
 }
 
 .main .container .items .item:active {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 0 var(--default-black);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 var(--default-black);
 }
 
 .main .container .items .item .item-image {
@@ -244,7 +251,7 @@ body::-webkit-scrollbar {
 .main .container .pagenation {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .main .container .pagenation > * svg {
@@ -333,8 +340,9 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
-.footer .notice {
-    margin-top: 50px;
+.notice {
+    user-select: none;
+    transform: translateY(100px);
     width: 100%;
     height: 50px;
     display: flex;
@@ -343,24 +351,24 @@ body::-webkit-scrollbar {
     background: whitesmoke;
 }
 
-.footer .notice .notice-date {
+.notice .notice-date {
     font-family: "GMarket Sans Medium";
     font-size: 12px;
     color: var(--default-black);
     margin-right: 10px;
 }
 
-.footer .notice .notice-text {
+.notice .notice-text {
     font-family: "GMarket Sans Medium";
     font-size: 12px;
     color: var(--default-black);
 }
 
-.footer .notice .notice-text b {
+.notice .notice-text b {
     color: var(--primary);
 }
 
-.footer .notice .notice-icon {
+.notice .notice-icon {
     transform: scale(.8);
     font-family: "Pretendard Regular";
     font-size: 12px;
@@ -402,7 +410,7 @@ body::-webkit-scrollbar {
 
 .main .sub-visual {
     width: 100%;
-    height: 500px;
+    height: 400px;
     /* position: relative; */
     /* background: url("../images/light-leak.jpg");
     background-position-x: center;
@@ -437,8 +445,8 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding: 200px 0;
-    backdrop-filter: blur(100px);
+    padding: 125px 0;
+    /* backdrop-filter: blur(100px); */
     user-select: none;
 }
 
@@ -458,7 +466,6 @@ body::-webkit-scrollbar {
 
 .main .container .d-flex {
     display: flex;
-    align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
@@ -467,61 +474,52 @@ body::-webkit-scrollbar {
 .main .container .side-menu {
     margin-right: 50px;
     flex-basis: 300px;
-    height: 350px;
-    border: 1px solid var(--primary-shadow);
-    border-radius: 5px;
-    overflow-y: scroll;
     user-select: none;
-}
-
-.main .container .side-menu::-webkit-scrollbar {
-    display: none;
+    border-right: 1px solid var(--default-black);
 }
 
 .main .container .side-menu .side-menu-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
     font-family: "GMarket Sans Medium";
     font-size: 16px;
-    width: 100%;
-    background: var(--primary);
-    color: white;
-    padding: 15px 20px;
 }
 
-.main .container .side-menu .side-menu-items .side-menu-item {
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 0 0 var(--primary-shadow);
-    transform: translateY(0);
-    transition: .1s;
-}
-
-.main .container .side-menu .side-menu-items .side-menu-item:hover {
-    background: var(--primary);
-    box-shadow: 0 5px 0 var(--primary-shadow);
-    transform: translateY(-5px);
-}
-
-.main .container .side-menu .side-menu-items .side-menu-item:active {
-    box-shadow: 0 2px 0 var(--primary-shadow);
-    transform: translateY(-2px);
+.main .container .side-menu .side-menu-head svg {
+    transform: translateY(-3px);
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
 }
 
 .main .container .side-menu .side-menu-items .side-menu-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
     font-family: "GMarket Sans Medium";
     font-size: 14px;
+    background: white;
     color: var(--default-black);
     text-decoration: none;
+    cursor: default;
 }
 
-.main .container .side-menu .side-menu-items .side-menu-item:hover a {
-    color: white;
+.main .container .side-menu .side-menu-items .side-menu-item a::before {
+    display: block;
+    content: '';
+    margin-right: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: var(--default-black);
+    transform: translateY(-2px);
 }
 
 
 .main .container .markdown {
-    border: 1px solid var(--default-black);
-    border-radius: 5px;
-    padding: 50px;
     flex-basis: calc(100% - 350px);
     min-width: 750px;
 }
@@ -529,6 +527,10 @@ body::-webkit-scrollbar {
 .main .container .markdown * {
     font-family: "GMarket Sans Medium";
     color: var(--default-black);
+}
+
+.main .container .markdown *:first-child {
+    margin-top: 0;
 }
 
 .main .container .markdown a,
@@ -562,6 +564,7 @@ body::-webkit-scrollbar {
 
 
 .main .container .categories {
+    margin-bottom: 200px;
     user-select: none;
     display: flex;
 }
@@ -584,13 +587,13 @@ body::-webkit-scrollbar {
     background: var(--primary);
     color: white;
     border: 1px solid var(--primary-shadow);
-    box-shadow: 0 5px 0 var(--primary-shadow);
-    transform: translateY(-5px);
+    box-shadow: 0 3px 0 var(--primary-shadow);
+    transform: translateY(-3px);
 }
 
 .main .container .categories .category:active {
-    box-shadow: 0 2px 0 var(--primary-shadow);
-    transform: translateY(-2px);
+    box-shadow: 0 1px 0 var(--primary-shadow);
+    transform: translateY(-1px);
 }
 
 .main .container .categories .category::before {
@@ -605,9 +608,15 @@ body::-webkit-scrollbar {
         flex-basis: 100%;
         margin-bottom: 100px;
         margin-right: 0;
+        border: 0;
+        border-top: 1px solid var(--default-black);
+        border-bottom: 1px solid var(--default-black);
+        padding: 25px;
     }
 
     .main .container .markdown {
+        border: 0;
+        padding: 0;
         flex-basis: 100%;
         min-width: auto;
     }
@@ -630,10 +639,11 @@ body::-webkit-scrollbar {
 
 .modal-bg .modal {
     position: relative;
-    width: 500px;
+    width: 600px;
+    height: 500px;
     background: white;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .modal-bg .modal #search {
@@ -678,19 +688,23 @@ body::-webkit-scrollbar {
 }
 
 .modal-bg .modal .modal-items .modal-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 0 var(--default-black);
+    transform: translateY(-3px);
+    box-shadow: 0 3px 0 var(--default-black);
 }
 
 .modal-bg .modal .modal-items .modal-item:active {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 0 var(--default-black);
+    transform: translateY(-1px);
+    box-shadow: 0 1px 0 var(--default-black);
 }
 
 .modal-bg .modal .modal-items .modal-item .modal-item-title {
     font-family: "GMarket Sans Medium";
     font-size: 16px;
     color: var(--default-black);
+}
+
+.modal-bg .modal .modal-items .modal-item .modal-item-title .highlight {
+    background: yellow;
 }
 
 .modal-bg .modal .modal-items .modal-item .modal-item-description {
@@ -710,4 +724,14 @@ body::-webkit-scrollbar {
     top: 20px;
     right: 20px;
     fill: var(--default-black);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .modal-bg .modal {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 }

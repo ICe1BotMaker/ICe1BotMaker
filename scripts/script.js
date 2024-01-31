@@ -8,7 +8,7 @@
         document.querySelector(`.items`).innerHTML = ``;
         posts.forEach(post => {
             document.querySelector(`.items`).innerHTML += `
-            <div class="item" onclick="location.href = '/ICe1BotMaker/detail.html?id=${post.id}';">
+            <div class="item" onclick="location.href = '/ICe1BotMaker/view.html?id=${post.id}';">
                 <div class="item-image">
                     <img src="${post.image}" alt="item-image">
                 </div>
@@ -19,7 +19,7 @@
                 </div>
             </div>`;
         });
-    } else if (bodyname === `detail`) {
+    } else if (bodyname === `view`) {
         const id = new URLSearchParams(location.search).get(`id`);
         const post = posts[id];
     
@@ -37,15 +37,38 @@
             post.categories.forEach((category, idx) => document.querySelector(`.categories`).innerHTML += `<div class="category category-${idx}">${category}</div>`);
             post.categories.forEach((category, idx) => {
                 document.querySelector(`.category-${idx}`).onclick = () => {
-                    const modal = document.querySelector(`#SearchModalBackground`);
-                    modal.style.display = `flex`;
-                    modal.querySelector(`#search`).value = category;
-                    modal.querySelector(`#search`).oninput();
+                    location.href = `/ICe1BotMaker/category.html?category=${category}`;
                 }
             });
 
             document.querySelector(`.side-menu-items`).innerHTML = ``;
             post.index.forEach(index => document.querySelector(`.side-menu-items`).innerHTML += `<div class="side-menu-item"><a href="${index.link}">${index.name}</a></div>`);
+        }
+    } else if (bodyname === `category`) {
+        const category = new URLSearchParams(location.search).get(`category`);
+
+        if (!category) location.href = `/`;
+        else {
+            const filtered = posts.filter(e => e.categories.includes(category));
+
+            if (filtered.length > 0) {
+                document.querySelector(`.items`).innerHTML = ``;
+                filtered.forEach(post => {
+                    document.querySelector(`.items`).innerHTML += `
+                    <div class="item" onclick="location.href = '/ICe1BotMaker/view.html?id=${post.id}';">
+                        <div class="item-image">
+                            <img src="${post.image}" alt="item-image">
+                        </div>
+    
+                        <div class="item-content">
+                            <p class="item-content-title">${post.title}</p>
+                            <p class="item-content-description">${post.description}</p>
+                        </div>
+                    </div>`;
+                });
+            } else {
+                document.querySelector(`.items`).innerHTML = `카테고리 검색 결과가 없습니다.`;
+            }
         }
     }
 
@@ -57,23 +80,29 @@
     modal.querySelector(`.modal-close`).onclick = () => modal.style.display = `none`;
 
     modal.querySelector(`#search`).oninput = () => {
+        const searchTerm = modal.querySelector(`#search`).value.toLowerCase();
         const items = [];
-
+    
         modalItems.innerHTML = ``;
-
+    
         posts.forEach(post => {
-            modal.querySelector(`#search`).value.split(``).forEach(text => {
-                if (post.title.split(``).concat(post.categories.reduce((pre, cur) => pre.concat(cur.split(``)), [])).includes(text.trim()) && !items.includes(post)) {
-                    items.push(post);
-                    modalItems.innerHTML += `
-                    <div class="modal-item" onclick="location.href = '/ICe1BotMaker/detail.html?id=${post.id}';">
-                        <p class="modal-item-title">${post.title}</p>
-                        <p class="modal-item-description">${post.description}</p>
-                    </div>`;
-                }
-            });
+            const titleLower = post.title.toLowerCase();
+            const contentLower = post.content.toLowerCase();
+    
+            if (titleLower.includes(searchTerm) || contentLower.includes(searchTerm)) {
+                items.push(post);
+    
+                const highlightedTitle = post.title.replace(new RegExp(`(${searchTerm})`, 'gi'), (_, p1) => `<span class="highlight">${p1}</span>`);
+                const highlightedDescription = post.description.replace(new RegExp(`(${searchTerm})`, 'gi'), (_, p1) => `<span class="highlight">${p1}</span>`);
+    
+                modalItems.innerHTML += `
+                <div class="modal-item" onclick="location.href = '/ICe1BotMaker/view.html?id=${post.id}';">
+                    <p class="modal-item-title">${highlightedTitle}</p>
+                    <p class="modal-item-description">${highlightedDescription}</p>
+                </div>`;
+            }
         });
-
+    
         modalText.innerHTML = `${items.length}개의 게시글을 찾았어요.`;
     }
 })();
