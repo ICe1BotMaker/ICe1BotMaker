@@ -201,10 +201,10 @@ body::-webkit-scrollbar {
     transition: .1s;
 }
 
-.main .container .items .item:last-child {
+/* .main .container .items .item:last-child {
     margin-right: 0;
     margin-bottom: 0;
-}
+} */
 
 .main .container .items .item:hover {
     transform: translateY(-5px);
@@ -450,16 +450,26 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
+.main .sub-visual .sub-visual-content .container .sub-visual-content-category {
+    font-family: "Pretendard SemiBold";
+    font-size: 16px;
+    color: var(--default-black);
+}
+
+.main .sub-visual .sub-visual-content .container .sub-visual-content-category::before { content: '[ '; }
+.main .sub-visual .sub-visual-content .container .sub-visual-content-category::after { content: ' ]'; }
+
 .main .sub-visual .sub-visual-content .container .sub-visual-content-title {
     font-family: "Pretendard Bold";
     font-size: 36px;
+    margin-top: 10px;
     color: var(--default-black);
 }
 
 .main .sub-visual .sub-visual-content .container .sub-visual-content-description {
     font-family: "Pretendard Medium";
     font-size: 24px;
-    margin-top: 20px;
+    margin-top: 10px;
     color: var(--default-black);
 }
 
@@ -522,6 +532,7 @@ body::-webkit-scrollbar {
 .main .container .markdown {
     flex-basis: calc(100% - 350px);
     min-width: 750px;
+    overflow-x: scroll;
 }
 
 .main .container .markdown * {
@@ -562,14 +573,18 @@ body::-webkit-scrollbar {
     font-family: Consolas, 'Courier New', monospace;
 }
 
+.main .container .markdown img {
+    width: 100%;
+}
 
-.main .container .categories {
+
+.main .container .tags {
     margin-bottom: 200px;
     user-select: none;
     display: flex;
 }
 
-.main .container .categories .category {
+.main .container .tags .tag {
     font-family: "Pretendard Regular";
     font-size: 14px;
     padding: 5px 10px;
@@ -583,7 +598,7 @@ body::-webkit-scrollbar {
     transition: .1s;
 }
 
-.main .container .categories .category:hover {
+.main .container .tags .tag:hover {
     background: var(--primary);
     color: white;
     border: 1px solid var(--primary-shadow);
@@ -591,12 +606,12 @@ body::-webkit-scrollbar {
     transform: translateY(-3px);
 }
 
-.main .container .categories .category:active {
+.main .container .tags .tag:active {
     box-shadow: 0 1px 0 var(--primary-shadow);
     transform: translateY(-1px);
 }
 
-.main .container .categories .category::before {
+.main .container .tags .tag::before {
     display: inline-block;
     content: '#';
     margin-right: 5px;
