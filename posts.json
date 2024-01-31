@@ -33,7 +33,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -45,7 +45,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -57,7 +57,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -69,7 +69,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -81,7 +81,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -93,7 +93,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
 
@@ -109,7 +109,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -121,7 +121,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -133,7 +133,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     },
     {
@@ -145,7 +145,7 @@
         "tags": ["lorem", "테스트", "test"],
         "image": "https://avatars.githubusercontent.com/u/142963519?s=400&u=2ef99deffbda1b7215642391de85a7abf2ae64e0&v=4",
         "index": [
-            { "name": "Lorem ipsum", "link": "#lorem-ipsum" },
+            { "name": "Lorem ipsum", "link": "#lorem-ipsum" }
         ]
     }
 ]
