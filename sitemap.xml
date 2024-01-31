@@ -8,13 +8,18 @@
 
 
 <url>
-  <loc>https://ice1botmaker.github.io/ICe1BotMaker/detail.html?id=0</loc>
-  <lastmod>2024-01-30T06:32:27+00:00</lastmod>
+  <loc>https://ice1botmaker.github.io/ICe1BotMaker/view.html</loc>
+  <lastmod>2024-01-31T03:34:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ice1botmaker.github.io/ICe1BotMaker/index.html</loc>
-  <lastmod>2024-01-30T06:32:27+00:00</lastmod>
+  <lastmod>2024-01-31T03:34:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ice1botmaker.github.io/ICe1BotMaker/tag.html</loc>
+  <lastmod>2024-01-31T03:34:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
