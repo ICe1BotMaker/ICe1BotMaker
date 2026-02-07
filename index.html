@@ -8,6 +8,7 @@
         <script src="https://unpkg.com/lucide@latest"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
 
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -22,7 +23,7 @@
 
     <body>
         <div class="max-w-[800px] mx-auto bg-white h-dvh overflow-y-scroll">
-            <div class="md:p-[128px_48px] p-[96px_24px]">
+            <div class="md:p-[128px_48px] p-[96px_24px]" id="container">
                 <div class="flex flex-col gap-[48px]">
                     <div class="flex flex-col gap-[24px]">
                         <div
@@ -2094,6 +2095,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="md:p-[48px] p-[24px]">
+                <div class="flex justify-end">
+                    <button
+                        class="p-[10px_16px] rounded-[8px] bg-gray-50 border border-gray-200 flex gap-[8px] items-center"
+                        onclick="convertToPdf()"
+                    >
+                        <i
+                            data-lucide="hard-drive-download"
+                            class="size-[16px] stroke-gray-900"
+                        ></i>
+
+                        <span
+                            class="font-[Pretendard] font-medium text-[14px] text-gray-900 leading-none"
+                            >PDF 다운로드</span
+                        >
+                    </button>
                 </div>
             </div>
         </div>

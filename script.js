@@ -49,3 +49,14 @@ function toggleSection(sectionId, defaultOpen = false) {
 document.addEventListener("DOMContentLoaded", () => {
     toggleSection("education", true);
 });
+
+function convertToPdf() {
+    const container = document.getElementById("container");
+    const option = {
+        filename: "고서온_이력서.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        pagebreak: { mode: "avoid-all" },
+    };
+
+    html2pdf().set(option).from(container).save();
+}
