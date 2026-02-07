@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+        format("woff2");
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+        format("woff2");
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+        format("woff2");
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+        format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+        format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+        format("woff2");
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+        format("woff2");
+    font-weight: 900;
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid white;
+    background: oklch(92.8% 0.006 264.531);
+    border-radius: 12px 12px 12px 12px;
+}
+
+.tag {
+    display: block;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 12px;
+    padding: 2px 8px;
+    background: oklch(96.7% 0.003 264.542);
+    border-radius: 4px;
+}
+
+.collapsible {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+        grid-template-rows 0.25s ease-out,
+        margin-top 0.25s ease-out,
+        opacity 0.15s ease;
+    margin-top: 0;
+    opacity: 0;
+}
+
+.collapsible.open {
+    grid-template-rows: 1fr;
+    margin-top: 24px;
+    opacity: 1;
+}
+
+.collapsible > div {
+    overflow: hidden;
+}
+
+.chevron {
+    transition: transform 0.25s ease-out;
+}
+
+.chevron.rotate {
+    transform: rotate(180deg);
+}
