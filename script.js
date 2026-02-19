@@ -60,3 +60,26 @@ function convertToPdf() {
 
     html2pdf().set(option).from(container).save();
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+const sans = urlParams.get("sans");
+
+if (sans === "true") {
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = [
+            "history",
+            "work",
+            "sign",
+            "stock",
+            "education",
+            "coding-stack",
+            "design-stack",
+            "compose-stack",
+            "movie-stack",
+            "blindspot",
+        ];
+        sections.forEach((id) => toggleSection(id, true));
+    });
+    document.querySelector("#download-section").style.display = "none";
+    document.querySelector("#projects").classList.add("!grid-cols-3");
+}
