@@ -82,4 +82,5 @@ if (sans === "true") {
     });
     document.querySelector("#download-section").style.display = "none";
     document.querySelector("#projects").classList.add("!grid-cols-3");
+    document.querySelector("html").classList.add("!bg-white");
 }
